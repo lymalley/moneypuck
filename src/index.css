@@ -1,0 +1,34 @@
+
+
+#columnsFilters > div > ul {
+  min-width: 0px;
+  border: 0px;
+  display: flex;
+  > div {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+.columnsFilterMenu {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  border: 0px;
+  padding: 0px 12px 12px 12px;
+  > div {
+      display: flex;
+      flex-flow: column wrap;
+  }
+}
+
+.columnsFiltersFooter {
+  display: flex;
+  padding: 8px 8px 0px 8px;
+  align-items: center;
+  > button {
+      width: 100% 
+  }
+}
