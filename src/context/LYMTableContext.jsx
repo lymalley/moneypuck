@@ -21,6 +21,11 @@ const tableReducer = (state, action) => {
         ...state,
         ...payload,
       }
+    case TableAction.SET_LYM_TABLE_STATE:
+      return {
+        ...state,
+        ...payload,
+      }
     case TableAction.HIDE_COLUMNS:
       return {
         ...state,

@@ -10,7 +10,8 @@ export const TableAction = {
     HIDE_COLUMNS: "HIDE_COLUMNS",
     SET_COLUMNS: "SET_COLUMNS",
     SET_DATA: "SET_DATA",
-    SET_SORT: "SET_SORT"
+    SET_SORT: "SET_SORT",
+    SET_LYM_TABLE_STATE: "SET_LYM_TABLE_STATE"
 }
 
 export const initialState = {

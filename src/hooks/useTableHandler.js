@@ -54,7 +54,7 @@ const useTableHandler = () => {
            
             setSort(id, defaultSort)
         },
-    };
+        setLYMTableState: (payload) => dispatch({ type: TableAction.SET_LYM_TABLE_STATE, payload})    };
 };
 
 export default useTableHandler

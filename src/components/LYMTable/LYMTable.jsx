@@ -12,7 +12,8 @@ import useIsDevice, { deviceSize } from '../../hooks/useIsDevice'
 
 const LYMTable = ({ columns, data, tableType, title, isLoading }) => {
   const isDevice = useIsDevice(deviceSize.sm)
-  const { initialLoad, setBodyData } = useTableHandler()
+  const { state, initialLoad, setBodyData, setLYMTableState } =
+    useTableHandler()
   const tableRef = useRef(null)
   const handlePrint = usePrint(tableRef)
   useEffect(() => {
@@ -21,6 +22,9 @@ const LYMTable = ({ columns, data, tableType, title, isLoading }) => {
   useEffect(() => {
     if (data && !isLoading) setBodyData(data)
   }, [data, isLoading])
+  useEffect(() => {
+    if (state.title !== title) setLYMTableState({ title })
+  }, [title])
   return (
     <Box sx={{ width: '100%' }}>
       <Paper
